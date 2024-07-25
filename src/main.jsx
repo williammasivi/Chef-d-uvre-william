@@ -1,35 +1,59 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import LayoutRoute from './routes/LayoutRoute';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import Layout from './components/Layout';
+import AuthLayout from './components/AuthLayout';
+import Login from './auth/Login';
+import SignUp from './auth/SignUp';
+import Dashboard from './pages/Dashboard';
+import Doctor from './pages/Doctor';
+import Settings from './pages/Settings';
 import Consultation from './pages/Consultation';
-import Pharmacies from './pages/Pharmacies';
-import Home from './pages/Home';
-import Medication from './pages/Medication';
-import Records from './pages/Records';
 import './css/index.css';
-import Apropos from './pages/Apropos';
-import Service from './pages/services';
-import Blog from './pages/Blog';
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <LayoutRoute />,
+    element: <Layout />,
     children: [
-      { path: '', element: <Home /> },
-      { path: 'consultation', element: <Consultation /> },
-      { path: 'medication', element: <Medication /> },
-      { path: 'pharmacies', element: <Pharmacies /> },
-      { path: 'records', element: <Records /> },
-      { path: '/about', element: <Apropos />},
-      { path: '/services', element: <Service />},
-      { path: '/blog', element: <Blog />}
-    ],
+      {
+        path: '/',
+        element: <Dashboard /> 
+      },
+      {
+        path: '/doctor',
+        element: <Doctor />
+      },
+      {
+        path: '/settings',
+        element: <Settings />
+      },
+      {
+        path: '/consultation',
+        element: <Consultation />
+      }
+    ]
   },
+  {
+    path: '/auth',
+    element: <AuthLayout />,
+    children: [
+      {
+        path: '/auth/login',
+        element: <Login />
+      },
+      {
+        path: '/auth/register',
+        element: <SignUp />
+      }
+    ]
+  },
+  {
+    path: '*',
+    element: <h1>Not found</h1>
+  }
 ]);
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
