@@ -13,6 +13,56 @@ export default function Consultation() {
                </a>
             </li>
          </div>
+         <div class="max-w-5xl mx-auto bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-6">Consultation</h2>
+
+            {/* <!-- Search Bar --> */}
+            <div class="mb-8">
+               <input type="text" placeholder="Search for doctors..." class="mt-1 p-3 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+            </div>
+
+            {/* <!-- Doctors List --> */}
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+               {/* <!-- Doctor Card --> */}
+               <div class="bg-white p-6 rounded-lg shadow-md">
+                  <div class="flex items-center space-x-4 mb-4">
+                     <img src="https://via.placeholder.com/150" alt="Doctor" class="w-16 h-16 rounded-full" />
+                     <div>
+                        <h3 class="text-lg font-semibold">Dr. John Doe</h3>
+                        <p class="text-gray-600">Cardiologist</p>
+                     </div>
+                  </div>
+                  <p class="text-gray-700 mb-4">Specializes in heart health and cardiovascular diseases.</p>
+                  <button class="bg-indigo-600 text-white py-2 px-4 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Contact</button>
+               </div>
+
+               {/* <!-- Repeat Doctor Card for other doctors --> */}
+               <div class="bg-white p-6 rounded-lg shadow-md">
+                  <div class="flex items-center space-x-4 mb-4">
+                     <img src="https://via.placeholder.com/150" alt="Doctor" class="w-16 h-16 rounded-full" />
+                     <div>
+                        <h3 class="text-lg font-semibold">Dr. Jane Smith</h3>
+                        <p class="text-gray-600">Dermatologist</p>
+                     </div>
+                  </div>
+                  <p class="text-gray-700 mb-4">Expert in skin conditions, including eczema and psoriasis.</p>
+                  <button class="bg-indigo-600 text-white py-2 px-4 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Contact</button>
+               </div>
+
+               <div class="bg-white p-6 rounded-lg shadow-md">
+                  <div class="flex items-center space-x-4 mb-4">
+                     <img src="https://via.placeholder.com/150" alt="Doctor" class="w-16 h-16 rounded-full" />
+                     <div>
+                        <h3 class="text-lg font-semibold">Dr. Emily Johnson</h3>
+                        <p class="text-gray-600">Pediatrician</p>
+                     </div>
+                  </div>
+                  <p class="text-gray-700 mb-4">Specializes in the health and medical care of children.</p>
+                  <button class="bg-indigo-600 text-white py-2 px-4 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Contact</button>
+               </div>
+               {/* <!-- Add more doctor cards as needed --> */}
+            </div>
+         </div>
 
       </>
    );

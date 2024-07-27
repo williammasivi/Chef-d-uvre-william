@@ -6,9 +6,9 @@ import AuthLayout from './components/AuthLayout';
 import Login from './auth/Login';
 import SignUp from './auth/SignUp';
 import Dashboard from './pages/Dashboard';
-import Doctor from './pages/Doctor';
 import Settings from './pages/Settings';
 import Consultation from './pages/Consultation';
+import NotFound from './pages/NotFound';
 import './css/index.css';
 
 
@@ -19,11 +19,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Dashboard /> 
-      },
-      {
-        path: '/doctor',
-        element: <Doctor />
+        element: <Dashboard />
       },
       {
         path: '/settings',
@@ -51,7 +47,7 @@ const router = createBrowserRouter([
   },
   {
     path: '*',
-    element: <h1>Not found</h1>
+    element: <NotFound/>
   }
 ]);
 

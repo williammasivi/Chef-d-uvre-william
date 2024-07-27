@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function Header() {
    return (
       <header>
@@ -8,12 +10,12 @@ export default function Header() {
                      <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
                         <span className="sr-only">Open sidebar</span>
                         <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                           <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+                           <path clipRule="evenodd" fillRule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
                         </svg>
                      </button>
                      <a href="https://flowbite.com" className="flex ms-2 md:me-24">
                         <img src="DAILY.png" className="h-8 me-3" alt="FlowBite Logo" />
-                        <span className="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap">Daily-health</span>
+                        <span className="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap">Daily Health</span>
                      </a>
                   </div>
                   <div className="flex items-center">
@@ -53,6 +55,29 @@ export default function Header() {
                </div>
             </div>
          </nav>
+         <div className="mt-16 px-4 sm:px-6 lg:px-8">
+            <h1 className="text-3xl font-bold leading-tight text-gray-900">Welcome to Daily Health</h1>
+            <p className="mt-4 text-lg text-gray-600">
+               Your comprehensive online health management system. Connect with doctors, locate pharmacies, and set medication reminders with ease.
+            </p>
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               <div className="p-6 bg-white rounded-lg shadow-md">
+                  <img src="remote-consultation.jpg" alt="Remote Consultation" className="w-full h-40 object-cover rounded-lg mb-4"/>
+                  <h2 className="text-xl font-semibold mb-2">Remote Medical Consultations</h2>
+                  <p className="text-gray-600">Connect with healthcare professionals from the comfort of your home.</p>
+               </div>
+               <div className="p-6 bg-white rounded-lg shadow-md">
+                  <img src="pharmacy-location.jpg" alt="Pharmacy Location" className="w-full h-40 object-cover rounded-lg mb-4"/>
+                  <h2 className="text-xl font-semibold mb-2">Pharmacy Locator</h2>
+                  <p className="text-gray-600">Find pharmacies near you quickly and easily.</p>
+               </div>
+               <div className="p-6 bg-white rounded-lg shadow-md">
+                  <img src="medication-reminder.jpg" alt="Medication Reminder" className="w-full h-40 object-cover rounded-lg mb-4"/>
+                  <h2 className="text-xl font-semibold mb-2">Medication Reminders</h2>
+                  <p className="text-gray-600">Never miss a dose with our handy reminder system.</p>
+               </div>
+            </div>
+         </div>
       </header>
    );
 }
